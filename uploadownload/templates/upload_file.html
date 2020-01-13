@@ -1,0 +1,16 @@
+<!doctype html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Upload File Raw Form</title>
+	</head>
+	<body>
+		<form action="{% url 'upload:upload-file' %}" method="POST" enctype="multipart/form-data">
+			{% csrf_token %}
+			{{ form.as_p }}
+			<input type="submit" value="Send raw file">
+		</form>
+		<hr>
+	</body>
+</html>

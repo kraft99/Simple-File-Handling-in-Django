@@ -1,0 +1,15 @@
+<!doctype html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Upload File</title>
+	</head>
+	<body>
+		<ul>
+		{% for file in files %}
+			<li>{{ file.image.name }} | <a href="/file/download{{file.get_file_url}}">download</a></li>
+		{% endfor %}
+		</ul>
+	</body>
+</html>
